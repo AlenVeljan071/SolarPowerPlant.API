@@ -23,7 +23,7 @@ namespace SolarPowerPlant.API.Services
             _mapper = mapper;
             _httpContextAccessor = httpContextAccessor;
         }
-        public async Task<SignupUserResponse> SignUserAccount(SignUserAccountRequest request)
+        public async Task<SignupUserResponse> SignUserAccountAsync(SignUserAccountRequest request)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<LoginResponse> Login(LoginRequest request)
+        public async Task<LoginResponse> LoginAsync(LoginRequest request)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<LoginResponse> RefreshToken(RefreshTokenRequest request)
+        public async Task<LoginResponse> RefreshTokenAsync(RefreshTokenRequest request)
         {
             try
             {

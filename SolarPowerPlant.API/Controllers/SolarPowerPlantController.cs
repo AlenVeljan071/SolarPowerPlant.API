@@ -30,7 +30,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<CreateResponse>> CreateAsync(SolarPowerPlantRequest request)
         {
-            return Ok(await _solarService.CreateSolarPowerPlant(request));
+            return Ok(await _solarService.CreateSolarPowerPlantAsync(request));
         }
 
         [HttpPut]
@@ -42,7 +42,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateCommentAsync(UpdatePowerPlantRequest request)
         {
-            return Ok(await _solarService.UpdateSolarPowerPlant(request));
+            return Ok(await _solarService.UpdateSolarPowerPlantAsync(request));
 
         }
 
@@ -55,7 +55,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteSolarPowerPlantAsync([FromRoute] int id)
         {
-            var response = await _solarService.DeleteSolarPowerPlantById(id);
+            var response = await _solarService.DeleteSolarPowerPlantByIdAsync(id);
             return NoContent();
         }
 
@@ -69,7 +69,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<SolarPowerPlantResponse>> GetSolarPowerPlantByIdAsync([FromRoute] int id)
         {
-            return Ok(await _solarService.GetSolarPowerPlantById(id));
+            return Ok(await _solarService.GetSolarPowerPlantByIdAsync(id));
         }
 
         [HttpGet("list")]
@@ -81,7 +81,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<SolarPowerPlantListResponse>> GetSolarPowerPlantListAsync([FromQuery] SolarPowerPlantSpecParams request)
         {
-            return Ok(await _solarService.GetSolarPowerPlantList(request));
+            return Ok(await _solarService.GetSolarPowerPlantListAsync(request));
         }
       
 

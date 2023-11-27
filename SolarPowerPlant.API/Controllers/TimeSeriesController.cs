@@ -28,7 +28,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<TimeSeriesListResponse>> GetTimeSeriesListAsync([FromQuery] TimeSeriesSpecParams request)
         {
-            return Ok(await _timeSeriesService.GetTimeSeriesList(request));
+            return Ok(await _timeSeriesService.GetTimeSeriesListAsync(request));
         }
     }
 }

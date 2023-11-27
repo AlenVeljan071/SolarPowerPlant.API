@@ -26,7 +26,7 @@ namespace SolarPowerPlant.API.Services
             _tokenService = tokenService;
         }
 
-        public async Task<CreateResponse> CreateSolarPowerPlant(SolarPowerPlantRequest request)
+        public async Task<CreateResponse> CreateSolarPowerPlantAsync(SolarPowerPlantRequest request)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<CreateResponse> UpdateSolarPowerPlant(UpdatePowerPlantRequest request)
+        public async Task<CreateResponse> UpdateSolarPowerPlantAsync(UpdatePowerPlantRequest request)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<bool> DeleteSolarPowerPlantById(int id)
+        public async Task<bool> DeleteSolarPowerPlantByIdAsync(int id)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<SolarPowerPlantResponse> GetSolarPowerPlantById(int id)
+        public async Task<SolarPowerPlantResponse> GetSolarPowerPlantByIdAsync(int id)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<SolarPowerPlantListResponse> GetSolarPowerPlantList(SolarPowerPlantSpecParams request)
+        public async Task<SolarPowerPlantListResponse> GetSolarPowerPlantListAsync(SolarPowerPlantSpecParams request)
         {
             try
             {

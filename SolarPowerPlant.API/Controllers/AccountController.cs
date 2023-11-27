@@ -29,7 +29,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<SignupUserResponse>> SignupAsync(SignUserAccountRequest request)
         {
-            return Ok(await _accountService.SignUserAccount(request));
+            return Ok(await _accountService.SignUserAccountAsync(request));
         }
 
 
@@ -43,7 +43,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<LoginResponse>> LoginAsync(LoginRequest request)
         {
-            return Ok(await _accountService.Login(request));
+            return Ok(await _accountService.LoginAsync(request));
         }
 
 
@@ -58,7 +58,7 @@ namespace SolarPowerPlant.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> RefreshAsync(RefreshTokenRequest request)
         {
-            return Ok(await _accountService.RefreshToken(request));
+            return Ok(await _accountService.RefreshTokenAsync(request));
         }
     }
 }

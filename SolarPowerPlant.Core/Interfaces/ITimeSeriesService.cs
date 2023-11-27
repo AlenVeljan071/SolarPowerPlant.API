@@ -6,9 +6,8 @@ namespace SolarPowerPlant.Core.Interfaces
 {
     public interface ITimeSeriesService
     {
-        Task<TimeSeriesListResponse> GetTimeSeriesList(TimeSeriesSpecParams request);
-       // Task<TimeSeriesListResponse> GetTimeSeriesListPerHour(TimeSeriesSpecParams request);
-        Task<CreateResponse> CreateRealProduction(int id, int power);
-        Task<CreateResponse> CreateForecastProduction(int id, int power);
+        Task<TimeSeriesListResponse> GetTimeSeriesListAsync(TimeSeriesSpecParams request);
+        Task<CreateResponse> CreateRealProductionAsync(int id, int power);
+        Task<CreateResponse> CreateForecastProductionAsync(int id, int power);
     }
 }

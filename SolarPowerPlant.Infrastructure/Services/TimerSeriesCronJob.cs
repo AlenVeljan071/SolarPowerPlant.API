@@ -35,8 +35,8 @@ namespace SolarPowerPlant.Infrastructure.Services
             {
                 try
                 {
-                    await timeseriesService.CreateRealProduction(solarPowerPlant.Id, solarPowerPlant.InstalledPower);
-                    await timeseriesService.CreateForecastProduction(solarPowerPlant.Id, solarPowerPlant.InstalledPower);
+                    await timeseriesService.CreateRealProductionAsync(solarPowerPlant.Id, solarPowerPlant.InstalledPower);
+                    await timeseriesService.CreateForecastProductionAsync(solarPowerPlant.Id, solarPowerPlant.InstalledPower);
                 }
                 catch (Exception ex)
                 {

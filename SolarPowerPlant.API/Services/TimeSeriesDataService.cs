@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using SolarPowerPlant.API.Errors;
 using SolarPowerPlant.Core.Entities;
 using SolarPowerPlant.Core.Enums;
@@ -27,7 +26,7 @@ namespace SolarPowerPlant.API.Services
             _tokenService = tokenService;
             _httpContextAccessor = httpContextAccessor;
         }
-        public async Task<CreateResponse> CreateRealProduction(int id, int power)
+        public async Task<CreateResponse> CreateRealProductionAsync(int id, int power)
         {
             try
             {
@@ -53,7 +52,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<CreateResponse> CreateForecastProduction(int id, int power)
+        public async Task<CreateResponse> CreateForecastProductionAsync(int id, int power)
         {
             try
             {
@@ -92,7 +91,7 @@ namespace SolarPowerPlant.API.Services
                 throw ex;
             }
         }
-        public async Task<TimeSeriesListResponse> GetTimeSeriesList(TimeSeriesSpecParams request)
+        public async Task<TimeSeriesListResponse> GetTimeSeriesListAsync(TimeSeriesSpecParams request)
         {
             try
             {
