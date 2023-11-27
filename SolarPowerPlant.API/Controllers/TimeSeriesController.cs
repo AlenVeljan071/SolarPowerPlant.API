@@ -30,19 +30,5 @@ namespace SolarPowerPlant.API.Controllers
         {
             return Ok(await _timeSeriesService.GetTimeSeriesList(request));
         }
-
-
-        //[HttpGet("list/hour")]
-        //[SwaggerOperation(Summary = "Get time series list per hour.", Description = "Get time series list per hour by solar power plant id.")]
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
-        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        //public async Task<ActionResult<TimeSeriesListResponse>> GetTimeSeriesListPerHourAsync([FromQuery] TimeSeriesSpecParams request)
-        //{
-        //    return Ok(await _timeSeriesService.GetTimeSeriesListPerHour(request));
-        //}
-
     }
 }
